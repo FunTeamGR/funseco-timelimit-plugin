@@ -1,0 +1,41 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "funseco/timelimit-plugin",
+    "description": "Funseco time limits — FlexiTime countdown (/timeleft /tl /timeset) and Auto TimeLimit",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.2",
+        "funseco/core": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Funseco\\TimeLimit\\": "src/"
+        }
+    },
+    "require-dev": {
+        "funseco/admin-plugin": "@dev",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.5.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Funseco\\TimeLimit\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "funseco": {
+            "id": "timelimit",
+            "name": "Timelimit",
+            "description": "time limits — FlexiTime countdown (/timeleft /tl /timeset) and Auto TimeLimit",
+            "provider": "Funseco\\TimeLimit\\TimeLimitServiceProvider"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
